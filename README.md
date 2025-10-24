@@ -104,42 +104,81 @@ const { default: makeWASocket } = require("@whiskeysockets/baileys")
 
 ## 💡 Examples
 
-### 📰 Newsletter Features
 
+## 📰 Newsletter Features
+
+### Get Newsletter Metadata
 ```javascript
 // Get newsletter metadata
 const metadata = await sock.newsletterMetadata("invite", "xxxxx")
 // or
 const metadata = await sock.newsletterMetadata("jid", "abcd@newsletter")
 console.log(metadata)
+```
 
+### Update Newsletter Description
+```javascript
 // Update newsletter description
 await sock.newsletterUpdateDescription("abcd@newsletter", "New Description")
+```
 
+### Update Newsletter Name
+```javascript
 // Update newsletter name
 await sock.newsletterUpdateName("abcd@newsletter", "New Name")
+```
 
+### Update Profile Picture
+```javascript
 // Update profile picture
 await sock.newsletterUpdatePicture("abcd@newsletter", buffer)
+```
 
+### Remove Profile Picture
+```javascript
 // Remove profile picture
 await sock.newsletterRemovePicture("abcd@newsletter")
+```
 
-// Mute/Unmute notifications
-await sock.newsletterUnmute("abcd@newsletter")
+### Mute Notifications
+```javascript
+// Mute notifications
 await sock.newsletterMute("abcd@newsletter")
+```
 
+### Unmute Notifications
+```javascript
+// Unmute notifications
+await sock.newsletterUnmute("abcd@newsletter")
+```
+
+### Create Newsletter
+```javascript
 // Create newsletter
 const metadata = await sock.newsletterCreate("Newsletter Name")
 console.log(metadata)
+```
 
+### Delete Newsletter
+```javascript
 // Delete newsletter
 await sock.newsletterDelete("abcd@newsletter")
+```
 
-// Follow/Unfollow
+### Follow Newsletter
+```javascript
+// Follow newsletter
 await sock.newsletterFollow("abcd@newsletter")
-await sock.newsletterUnfollow("abcd@newsletter")
+```
 
+### Unfollow Newsletter
+```javascript
+// Unfollow newsletter
+await sock.newsletterUnfollow("abcd@newsletter")
+```
+
+### Send Reactions
+```javascript
 // Send reactions
 const id = "175" // From message URL
 await sock.newsletterReactMessage("abcd@newsletter", id, "🥳")
@@ -325,35 +364,3 @@ If you find this project helpful, please consider giving it a star on GitHub!
 **Made with ❤️ for the WhatsApp Developer Community**
 
 </div>
-
-<style>
-  .markdown-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  
-  .markdown-body h1, .markdown-body h2, .markdown-body h3 {
-    border-bottom: 2px solid #e1e4e8;
-    padding-bottom: 0.3em;
-  }
-  
-  .markdown-body table {
-    border-collapse: collapse;
-    width: 100%;
-  }
-  
-  .markdown-body table th {
-    background-color: #f6f8fa;
-  }
-  
-  .markdown-body table th, .markdown-body table td {
-    border: 1px solid #dfe2e5;
-    padding: 6px 13px;
-    text-align: left;
-  }
-  
-  .markdown-body code {
-    background-color: #f6f8fa;
-    border-radius: 3px;
-    padding: 0.2em 0.4em;
-  }
-</style>
