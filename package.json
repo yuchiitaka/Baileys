@@ -61,7 +61,7 @@
         "uuid": "^9.0.0",
         "ws": "^8.13.0",
         "chalk": "*",
-        "gradient-
+        "gradient-string": "*"
     },
     "devDependencies": {
         "@adiwajshing/eslint-config": "github:adiwajshing/eslint-config",
