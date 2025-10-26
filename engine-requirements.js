@@ -1,5 +1,5 @@
-import chalk from "chalk";
-import gradient from "gradient-string";
+const chalk = require("chalk");
+const gradient = require("gradient-string");
 
 const major = parseInt(process.versions.node.split(".")[0], 10);
 
